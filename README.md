@@ -1,8 +1,9 @@
+This is a reproducable case for a bug report.
+
 # INSTRUCTIONS
 
 I couldn't reproduce the problem with Docker.
 Maybe it is just a Mac issue.
-
 
 ## Language + Locale
 
@@ -12,7 +13,7 @@ Set your language to Turkish. As shown here (no need to restart your machine):
 
 ### Initialize the database and the user
 
-  cat setup.sql | mysql -u <YOUR-ROOTish-USER> -p
+    cat setup.sql | mysql -u <YOUR-ROOTish-USER> -p
 
 ### Initiate!
 
@@ -29,18 +30,18 @@ Set your language to Turkish. As shown here (no need to restart your machine):
     cat teardown.sql | mysql -u <YOUR-ROOTish-USER> -p
 
 
-### Environment
+### My environment
 
     $ mysql --version
     > mysql  Ver 14.14 Distrib 5.5.35, for osx10.6 (i386) using readline 5.1
 
     $ java -version
-    java version "1.7.0_71"
-    Java(TM) SE Runtime Environment (build 1.7.0_71-b14)
-    Java HotSpot(TM) 64-Bit Server VM (build 24.71-b01, mixed mode)
+    > java version "1.7.0_71"
+    > Java(TM) SE Runtime Environment (build 1.7.0_71-b14)
+    > Java HotSpot(TM) 64-Bit Server VM (build 24.71-b01, mixed mode)
 
     $ uname -a
-    Darwin aliMBP.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015; root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64 i386 MacBookPro11,3 Darwin
+    > Darwin aliMBP.local 15.3.0 Darwin Kernel Version 15.3.0: Thu Dec 10 18:40:58 PST 2015; root:xnu-3248.30.4~1/RELEASE_X86_64 x86_64 i386 MacBookPro11,3 Darwin
 
 
 ### Log

@@ -1,4 +1,4 @@
-This is a reproducable case for a bug report.
+This is a reproducable case for a bug report. See https://liquibase.jira.com/browse/CORE-2772
 
 # INSTRUCTIONS
 

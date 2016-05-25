@@ -1,0 +1,27 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet id="001" author="generated" dbms="mysql">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="Installation"/>
+            </not>
+        </preConditions>
+        <createTable tableName="Installation">
+            <column name="id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="alias" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet id="002" author="generated" dbms="mysql">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <primaryKeyExists tableName="Installation"/>
+            </not>
+        </preConditions>
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="Installation"/>
+    </changeSet>
+</databaseChangeLog>
